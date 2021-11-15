@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<title>
+		Prime Generator
+	</title>
+	<body>
+		<h1>Welcome to the prime generator</h1>
+		<p>
+			You can use this to generator all the prime numbers smaller than a specified number
+		</p>
+		<p>
+			Maximum number: 
+			<input id="input"></input>
+			<button onclick="onClick()">Submit</button>
+		</p>
+		<p id="output">
+			The prime numbers are: 
+		</p>
+		<script>
+			function getPrimes(max) {
+    				var seive = new Array(max + 1);
+				var primes = new Array();
+				for (var i = 2; i <= max; i++) {
+					seive[i] = true;
+				}
+				for (var i = 2; i <= max; i++) {
+			        	if (seive[i]) {
+						primes.push(i);
+						for (var j = i + i; j <= max; j += i) {
+		                			seive[j] = false;
+						}
+					}
+				}
+				return primes;
+			}
+
+			function onClick() {
+				var max = document.getElementById('input').value;
+				var primes = getPrimes(max);
+				var answer = 'There are ' + primes.length + ' primes under ' + 'max' + '.';
+				answer += 'The prime numbers are: ';
+				for (var i = 0; i < primes.length; i++) {
+					answer += primes[i] + ' ';
+				}
+				var output = document.getElementById('output');
+				output.innerHTML = answer;
+			}
+		</script>
+	</body>
+
+</html>

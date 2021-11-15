@@ -1,0 +1,6 @@
+# General
+*.exe
+
+# Python
+*.pyc
+__init__.py
