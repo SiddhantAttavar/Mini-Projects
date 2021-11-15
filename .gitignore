@@ -4,3 +4,7 @@
 # Python
 *.pyc
 __init__.py
+
+# Web
+*.crx
+*.pem
