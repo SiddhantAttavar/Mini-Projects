@@ -28,3 +28,6 @@ print(f'{count} / {len(finalList)} scored above you in Karnataka. Check output.c
 input('Press Enter to exit: ')
 
 outputFile.writelines(res)
+
+inputFile.close()
+outputFile.close()
