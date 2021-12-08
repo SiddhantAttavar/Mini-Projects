@@ -26,6 +26,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Rock Paper Scissors: A program to play a game of Rock, Paper, Scissors
  - Serpinski Triangle 2: A program to draw a Serpinski Triangle. Read more about it [here](https://en.wikipedia.org/wiki/Serpinski_triangle)
  - Serpinski Triangle: Another program to draw a Serpinski Triangle
+ - Song Grapher: A program to generate a graph of all words in a song. Inspired by [this reddit post](https://www.reddit.com/r/teenagers/comments/razgcl/i_put_this_image_in_my_powerpoint_school_project/)
  - Sudoku: A program to solve a Sudoku puzzle
  - TicTacToe: A program that allows users to play a game of TicTacToe against the computer or another user
  - Tree: Another program to draw a Pythagorean tree
