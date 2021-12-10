@@ -5,6 +5,7 @@ My collection of mini-projects in various languages
 This repository consists of a number of small projects. Most of these _"mini-projects"_ are single file scripts. Some are more complex, but they are still not big enough to warrant their own repository.
 
 ## Python projects: <a name = "python-projects"></a>
+ - Advent Of Code: A program to find leaderboard rank in Advent Of Code. Originally from [u/Appare](https://www.reddit.com/user/Appare/), in [this post](https://www.reddit.com/r/adventofcode/comments/rcxx2a/i_wrote_a_script_to_tell_you_your_global_rank/)
  - Maze Solver: A maze solver written in Python which compares different maze solving algorithms
  - NTSE Score Ranking: A program to find your ranking in NTSE given the scores
  - PowerToys Run Search: A command line utility to search DuckDuckGo or any other search engine for a given query, which can be integrated with PowerToys Run
@@ -29,6 +30,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Sudoku: A program to solve a Sudoku puzzle
  - TicTacToe: A program that allows users to play a game of TicTacToe against the computer or another user
  - Tree: Another program to draw a Pythagorean tree
+ - UFDS Ranking: A program to find the total ranking in UFDS mocks
 
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game
