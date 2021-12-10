@@ -10,7 +10,6 @@ from sys import argv
 from os import path, listdir, mkdir
 from subprocess import check_call, DEVNULL
 from datetime import datetime, timezone, timedelta
-import shutil
 
 CACHE = "./.leaderboard-cache/"
 
