@@ -1,5 +1,9 @@
 # General
+# Files
 *.exe
+
+# Folders
+.leaderboard-cache/
 
 # Python
 *.pyc
