@@ -25,6 +25,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Pythagorean Tree: A program to draw a Pythagorean tree. Read more about it [here](https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal))
  - Range Divisible by 3: A program to find all the numbers in a given range which are divisible by 3
  - Rock Paper Scissors: A program to play a game of Rock, Paper, Scissors
+ - Score Modifier: A simple program to edit the values of a html table
  - Serpinski Triangle 2: A program to draw a Serpinski Triangle. Read more about it [here](https://en.wikipedia.org/wiki/Serpinski_triangle)
  - Serpinski Triangle: Another program to draw a Serpinski Triangle
  - Song Grapher: A program to generate a graph of all words in a song. Inspired by [this reddit post](https://www.reddit.com/r/teenagers/comments/razgcl/i_put_this_image_in_my_powerpoint_school_project/)
