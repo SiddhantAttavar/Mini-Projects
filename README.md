@@ -35,8 +35,9 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - UFDS Ranking: A program to find the total ranking in UFDS mocks
 
 ## Android projects: <a name = "android-projects"></a>
- - MyApplication: My first Android App
- - JustJava: A tutorial Android App to order coffee
+ - MyApplication: My first android app
+ - JustJava: A tutorial android app to order coffee
+ - CourtCounter: An android app to keep track of sports scores
 
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game
