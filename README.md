@@ -34,6 +34,9 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Tree: Another program to draw a Pythagorean tree
  - UFDS Ranking: A program to find the total ranking in UFDS mocks
 
+## Android projects: <a name = "android-projects"></a>
+ - MyApplication: My first Android App
+
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game
  - Game of Life: A program to simulate the Game of Life
