@@ -35,13 +35,13 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - UFDS Ranking: A program to find the total ranking in UFDS mocks
 
 ## Android projects: <a name = "android-projects"></a>
- - MyApplication: My first android app
- - JustJava: A tutorial android app to order coffee
- - CourtCounter: An android app to keep track of sports scores
- - BlackJack: An android app to play the popular card game [Black Jack](https://en.wikipedia.org/wiki/Blackjack)
  - Android apps: Some sample android apps
- - HappyBirthdayAndroidStudio: A simple app to wish someone on their birthday
- - NeuroskyTest: An example app that makes use of the [Neurosky EEG SDK for Android](https://store.neurosky.com/products/android-developer-tools-4)
+ - Black Jack: An android app to play the popular card game [Black Jack](https://en.wikipedia.org/wiki/Blackjack)
+ - Court Counter: An android app to keep track of sports scores
+ - Happy Birthday Android Studio: A simple app to wish someone on their birthday
+ - Just Java: A tutorial android app to order coffee
+ - My Application: My first android app
+ - Neurosky Test: An example app that makes use of the [Neurosky EEG SDK for Android](https://store.neurosky.com/products/android-developer-tools-4)
 
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game
