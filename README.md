@@ -40,6 +40,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - CourtCounter: An android app to keep track of sports scores
  - BlackJack: An android app to play the popular card game [Black Jack](https://en.wikipedia.org/wiki/Blackjack)
  - Android apps: Some sample android apps
+ - HappyBirthdayAndroidStudio: A simple app to wish someone on their birthday
 
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game

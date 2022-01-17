@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".BookSlotActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="BOOK A SLOT" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:background="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="ENTER"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:onClick="enterName"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Flat Number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="Block"
+            android:inputType="textCapWords"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="Tower"
+            android:inputType="textCapWords"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:hint="Unit number"
+            android:inputType="textCapWords"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="Date"
+        android:textSize="15sp" />
+
+    <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="Time"
+        android:textSize="15sp"
+        android:layout_marginBottom="8dp" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Sport"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Table Tennis"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Badminton"/>
+
+</LinearLayout>
+
+</ScrollView>
