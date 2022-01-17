@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="BOOK A SLOT" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Sport"/>
+
+        <CheckBox
+            android:id="@+id/TT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table Tennis"
+            android:onClick="setTT"/>
+
+        <CheckBox
+            android:id="@+id/Badminton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Badminton"
+            android:onClick="setBadminton"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="Date"
+            android:textSize="15sp" />
+
+        <DatePicker
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="Time"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/slot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9am - 10am"
+            android:onClick="slot1"/>
+
+        <CheckBox
+            android:id="@+id/slot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10am - 11am"
+            android:onClick="slot2"/>
+
+        <CheckBox
+            android:id="@+id/slot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11am - 12am"
+            android:onClick="slot3"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4pm - 5pm"
+            android:onClick="slot4"/>
+
+        <CheckBox
+            android:id="@+id/slot4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5pm - 6pm"
+            android:onClick="slot5"/>
+
+        <CheckBox
+            android:id="@+id/slot5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6pm - 7pm"
+            android:onClick="slot6"/>
+
+        <CheckBox
+            android:id="@+id/slot6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7pm - 8pm"
+            android:onClick="slot7"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Flat Number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp">
+
+            <EditText
+                android:id="@+id/block"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="Block"
+                android:inputType="textCapWords"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/tower"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="Tower"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/unit_number"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:hint="Unit number"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFIRM BOOKING"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="setDetails"/>
+
+    </LinearLayout>
+
+</ScrollView>
