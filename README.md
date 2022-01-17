@@ -36,6 +36,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
 
 ## Android projects: <a name = "android-projects"></a>
  - MyApplication: My first Android App
+ - JustJava: A tutorial Android App to order coffee
 
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game
