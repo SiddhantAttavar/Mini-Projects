@@ -38,6 +38,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - MyApplication: My first android app
  - JustJava: A tutorial android app to order coffee
  - CourtCounter: An android app to keep track of sports scores
+ - BlackJack: An android app to play the popular card game [Black Jack](https://en.wikipedia.org/wiki/Blackjack)
 
 ## Web projects: <a name = "web-projects"></a>
  - Dino Game: A simplified version of the Google Dinosaur game
