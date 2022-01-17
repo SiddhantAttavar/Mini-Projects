@@ -1,6 +1,7 @@
 # General
 # Files
 *.exe
+*.pptx
 
 # Folders
 .leaderboard-cache/
