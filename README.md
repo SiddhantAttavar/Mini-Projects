@@ -44,7 +44,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Neurosky Test: An example app that makes use of the [Neurosky EEG SDK for Android](https://store.neurosky.com/products/android-developer-tools-4)
 
 ## Web projects: <a name = "web-projects"></a>
- - [Dino Game](https://siddhantattavar.github.io/Mini-Projects/Web/Dino%20Game/index.html): A simplified version of the Google Dinosaur game
- - [Game of Life](https://siddhantattavar.github.io/Mini-Projects/Web/Game%20of%20Life/index.html): A program to simulate the Game of Life
- - [Prime Generator](https://siddhantattavar.github.io/Mini-Projects/Web/Prime%20Generator.html): A program to generate prime numbers under a given number
  - [Demos Math Project](https://siddhantattavar.github.io/Mini-Projects/Web/DesmosMathProjectClass11.html): A program to display the current state of a tic-tac-toe game state in desmos using only mathematical expressions
+ - [Dino Game](): A simplified version of the Google Dinosaur game
+ - [Game of Life](): A program to simulate the Game of Life
+ - [Prime Generator](https://siddhantattavar.github.io/Mini-Projects/Web/Prime%20Generator.html): A program to generate prime numbers under a given number
