@@ -12,7 +12,8 @@
 	This website graphs any tic tac toe game state on desmos using only mathematical functions. To use the website:
 	<ol>
 		<li>Enter the current tic tac toe game state into the text boxes below</li>
-		<li>Click on the Generate Game button</li>
+		<li>Click on the "Generate Game" button</li>
+		<li>To save the current game state as an image click the "Get Image" button</li>
 		<li>Enjoy!</li>
 	</ol>
 	<h2>Game grid input:</h2>
@@ -34,6 +35,7 @@
 		</tr>
  	</table>
 	<button type = "button" id = "button" onClick = "onClick()">Generate Graph</button>
+	<button type = "button" id = "button" onClick = "getImage()">Get Image</button>
 	<h2>Graph output:</h2>
  	<div id="calculator" style="width: 700px; height: 400px;"></div>
  	<script>
@@ -92,6 +94,20 @@
 			latex: 'x = 3 \\{ 0 \\leq y \\leq 3 \\}',
 			color: Desmos.Colors.BLACK
 		});
+	}
+
+	function getImage() {
+		var fullsize = calculator.screenshot();
+		var thumbnail = calculator.screenshot({
+			width: 200,
+			height: 200,
+			targetPixelRatio: 2
+		});
+		var img = document.createElement('img');
+		img.width = 200;
+		img.height = 200;
+		img.src = thumbnail;
+		document.body.appendChild(img);
 	}
 	</script>
 </body>
