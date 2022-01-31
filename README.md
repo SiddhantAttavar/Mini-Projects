@@ -47,3 +47,4 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Dino Game: A simplified version of the Google Dinosaur game
  - Game of Life: A program to simulate the Game of Life
  - Prime Generator: A program to generate prime numbers under a given number
+ - Demos Math Project: A program to display the current state of a tic-tac-toe game state in desmos using only mathematical expressions
