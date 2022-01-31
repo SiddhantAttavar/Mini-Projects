@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grade 11 Desmos Math Project - Siddhant Attavar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</head>
+<body>
+	<center><h1>Demos Class Project Siddhant Attavar</h1></center>
+	<h2>About this project:</h2>
+	This website graphs any tic tac toe game state on desmos using only mathematical functions. To use the website:
+	<ol>
+		<li>Enter the current tic tac toe game state into the text boxes below</li>
+		<li>Click on the Generate Game button</li>
+		<li>Enjoy!</li>
+	</ol>
+	<h2>Game grid input:</h2>
+ 	<table>
+	<tr>
+		<td><input type = "text" id = "b20"></td>
+		<td><input type = "text" id = "b21"></td>
+		<td><input type = "text" id = "b22"></td>
+	  	</tr>
+  		<tr>
+			<td><input type = "text" id = "b10"></td>
+			<td><input type = "text" id = "b11"></td>
+			<td><input type = "text" id = "b12"></td>
+	  	</tr>
+		<tr>
+			<td><input type = "text" id = "b00"></td>
+			<td><input type = "text" id = "b01"></td>
+			<td><input type = "text" id = "b02"></td>
+		</tr>
+ 	</table>
+	<button type = "button" id = "button" onClick = "onClick()">Generate Graph</button>
+	<h2>Graph output:</h2>
+ 	<div id="calculator" style="width: 700px; height: 400px;"></div>
+ 	<script>
+    var elt = document.getElementById('calculator');
+    var calculator = Desmos.GraphingCalculator(elt);
+
+	function onClick() {
+		calculator.setBlank();
+		calculator.setMathBounds({
+			left: -1,
+			right: 4,
+			bottom: -1,
+			top: 4
+		});
+		for (var i = 0; i < 3; i++) {
+			for (var j = 0; j < 3; j++) {
+				var textBox = document.getElementById('b' + j + i);
+				if (textBox.value == 'X') {
+					calculator.setExpression({
+						id: 'x1' + i + j,
+						latex: 'y - ' + j + ' = x - ' + i + ' \\{ ' + i + ' \\leq x \\leq ' + (i + 1) + ' \\}',
+						color: Desmos.Colors.RED
+					});
+					calculator.setExpression({
+						id: 'x2' + i + j,
+						latex: 'y - ' + j + ' + x - ' + i + ' = 1 \\{ ' + i + ' \\leq x \\leq ' + (i + 1) + ' \\}',
+						color: Desmos.Colors.RED
+					});
+				}
+				else if (textBox.value == 'O'){
+					calculator.setExpression({
+						id: 'o' + i + j,
+						latex: '(y - ' + j + ' - 0.5) ^ 2 + (x - ' + i + ' - 0.5) ^ 2 = 0.25',
+						color: Desmos.Colors.GREEN
+					});
+				}
+			}
+		}
+		calculator.setExpression({
+			id: 'top',
+			latex: 'y = 3 \\{ 0 \\leq x \\leq 3 \\}',
+			color: Desmos.Colors.BLACK
+		});
+		calculator.setExpression({
+			id: 'botton',
+			latex: 'y = 0 \\{ 0 \\leq x \\leq 3 \\}',
+			color: Desmos.Colors.BLACK
+		});
+		calculator.setExpression({
+			id: 'left',
+			latex: 'x = 0 \\{ 0 \\leq y \\leq 3 \\}',
+			color: Desmos.Colors.BLACK
+		});
+		calculator.setExpression({
+			id: 'right',
+			latex: 'x = 3 \\{ 0 \\leq y \\leq 3 \\}',
+			color: Desmos.Colors.BLACK
+		});
+	}
+	</script>
+</body>
+</html>
