@@ -22,30 +22,30 @@
 		<li>Enjoy!</li>
 	</ol>
 	<h2>Game grid input:</h2>
- 	<table>
+	<table>
 	<tr>
 		<td><input type = "text" id = "b20"></td>
 		<td><input type = "text" id = "b21"></td>
 		<td><input type = "text" id = "b22"></td>
-	  	</tr>
-  		<tr>
+		</tr>
+		<tr>
 			<td><input type = "text" id = "b10"></td>
 			<td><input type = "text" id = "b11"></td>
 			<td><input type = "text" id = "b12"></td>
-	  	</tr>
+		</tr>
 		<tr>
 			<td><input type = "text" id = "b00"></td>
 			<td><input type = "text" id = "b01"></td>
 			<td><input type = "text" id = "b02"></td>
 		</tr>
- 	</table>
+	</table>
 	<button type = "button" id = "button" onClick = "onClick()">Generate Graph</button>
 	<button type = "button" id = "button" onClick = "getImage()">Get Image</button>
 	<h2>Graph output:</h2>
- 	<div id="calculator" style="width: 700px; height: 400px;"></div>
- 	<script>
-    var elt = document.getElementById('calculator');
-    var calculator = Desmos.GraphingCalculator(elt);
+	<div id="calculator" style="width: 700px; height: 400px;"></div>
+	<script>
+	var elt = document.getElementById('calculator');
+	var calculator = Desmos.GraphingCalculator(elt);
 
 	function onClick() {
 		calculator.setBlank();
