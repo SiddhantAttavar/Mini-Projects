@@ -5,6 +5,6 @@ Remainder = Num
 while i <= 5:
     Digit=(Remainder/x)
     Remainder = Num % x
-    print Digit
+    print(Digit)
     x=x/10
     i=i+1
