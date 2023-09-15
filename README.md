@@ -17,6 +17,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Frog Jumping: A program to find the average number of jumps required to get across a pond
  - Gun Treul Simulation: A program to solve a popular probability problem. Read more about it [here](https://www.popularmechanics.com/science/math/a24727/riddle-of-the-week-11/)
  - HelloWorld: A program to print "Hello World"
+ - IEEE Round 1 Tasks: Solutions for the python tasks asked in the BITS Pilani IEEE club dev vertical round 1 selections
  - ImageRotation: A program to rotate an image by 90, 180 or 270 degrees
  - Marble Game: A program to simulate a popular marble game
  - Password Generator: A program to generate a random password
@@ -24,6 +25,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Prisoner Card Problem: A Monte Carlo simulation to find the optimal strategy for a game
  - Pythagorean Tree: A program to draw a Pythagorean tree. Read more about it [here](https://en.wikipedia.org/wiki/Pythagoras_tree_(fractal))
  - Range Divisible by 3: A program to find all the numbers in a given range, which are divisible by 3
+ - Resign Bot: A chess bot that resigns upon starting the game. Written as an entry for [this contest.](https://github.com/soum-c/chess-contest-api)
  - Rock Paper Scissors: A program to play a game of Rock, Paper, Scissors
  - Score Modifier: A simple program to edit the values of a html table
  - Serpinski Triangle 2: A program to draw a Serpinski Triangle. Read more about it [here](https://en.wikipedia.org/wiki/Serpinski_triangle)
@@ -33,7 +35,6 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - TicTacToe: A program that allows users to play a game of TicTacToe against the computer or another user
  - Tree: Another program to draw a Pythagorean tree
  - UFDS Ranking: A program to find the total ranking in UFDS mocks
- - Resign Bot: A chess bot that resigns upon starting the game. Written as an entry for [this contest.](https://github.com/soum-c/chess-contest-api)
 
 ## Android projects: <a name = "android-projects"></a>
  - Android apps: Some sample android apps
