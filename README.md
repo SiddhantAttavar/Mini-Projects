@@ -19,6 +19,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - HelloWorld: A program to print "Hello World"
  - IEEE Round 1 Tasks: Solutions for the python tasks asked in the BITS Pilani IEEE club dev vertical round 1 selections
  - ImageRotation: A program to rotate an image by 90, 180 or 270 degrees
+ - Line Intersections: A program to verify the solution for the last problem in the treasure hunt of the math association in 2023
  - Marble Game: A program to simulate a popular marble game
  - Password Generator: A program to generate a random password
  - plot graph: A program to plot a graph of y = x<sup>2</sup>
