@@ -1,15 +1,16 @@
 from functools import cache
-from matplotlib import pyplot as plt
 
 def visualize(s):
+	from matplotlib import pyplot as plt
 	x, y = zip(*s)
 	plt.plot(x, y, 'ro-')
 	plt.show()
 
 def no_symmetry(x, n):
+	return True
 	x = 2 * x + 1
 	v = [bool(x & (1 << j)) for j in range(n - 1)]
-	print(v)
+	# print(v)
 	
 	sym = [x]
 	sym.append(0)
@@ -20,7 +21,7 @@ def no_symmetry(x, n):
 	if not v[-1]:
 		sym[-1] ^= (1 << (n - 1)) - 1
 	
-	print(x, *sym)
+	# print(x, *sym)
 	return x == min(sym)
 
 def solve(n):
@@ -50,7 +51,7 @@ def solve(n):
 			if no_symmetry(i, n):
 				sols.append(l)
 				res += 1
-	print(sols)
+	# print(sols)
 	# for i in sols:
 	# 	visualize(i)
 	return res
@@ -64,10 +65,11 @@ def fib(n):
 		return 1
 	return fib(n - 1) + fib(n - 2)
 
-# for n in range(2, 22):
-# 	x, y = fib(n), solve(n)
-# 	print(n, x, y)
+print('n\tFib\tActual')
+for n in range(2, 22):
+	x, y = fib(n), solve(n)
+	print(n, x, y, sep = '\t')
 	# if x != y:
 	# 	print(n)
 	# 	break
-print(f'Ans: {solve(21)}')
+# print(f'Ans: {solve(21)}')
