@@ -1,13 +1,9 @@
 #include <stdio.h>
 #include <math.h>
-#include <string.h>
 #include <strings.h>
-#include <time.h>
-#include <assert.h>
-
+#define dt 0.1
 #define STR_MAX 10000
-const long double dt = 10;
-const int PER_DAY = 1;
+#define PER_DAY 1
 
 const long double G = 6.67430e-11 / 1e9;
 
@@ -27,11 +23,7 @@ void update_pos(Planet planets[], int n);
 
 
 long double mag(vect a) {
-    return sqrt((double) (a.x * a.x + a.y * a.y + a.z * a.z));
-}
-
-long double sqr_mag(vect a) {
-    return (a.x * a.x + a.y * a.y + a.z * a.z);
+    return sqrt(pow(a.x, 2) + pow(a.y, 2) + pow(a.z, 2));
 }
 
 vect add(vect a, vect b) {
@@ -55,26 +47,17 @@ void jsonify(float time, Planet p[], int n, char s[]) {
         strcat(s, log);
     }
     strcat(s, "},\n");
-}
 
-double get_time(clock_t *start) {
-    clock_t curr_time = clock();
-    double time_passed = (double) (curr_time - *start) / CLOCKS_PER_SEC;
-    *start = curr_time;
-    return time_passed;
 }
 
 int main() {
-    clock_t start = clock();
-    clock_t curr_time = start;
-
     FILE* fptr;
     fptr = fopen("solar_0_1.json", "w");
     fputs("{", fptr);
 
     //Origin in Solar System Baricenter, Frame of Reference is ICRF
     //Positions are in kilometers, velocities are in kilometers per second and mass is in kilograms
-    /* Planet planets[] = {
+    Planet planets[] = {
         {
             .name = "Sun",
             .pos = {-1.218177533485452e6, -3.947657577842895e5,  3.169980087428029e4},
@@ -136,94 +119,56 @@ int main() {
         //     .mass = 1.307e22
         // },
 
-    }; */
-
-    Planet planets[] = {
-        {
-            .name = "Earth",
-            .pos = {.x = 147.10e9,.y = 0,.z = 0},
-            .vel = {.x = 0,.y = 30.29e3,.z = 0},
-            .mass = 5.97219e24
-        },
-        {
-            .name = "Sun",
-            .pos = {.x = 0,.y = 0,.z = 0},
-            .vel = {.x = 0,.y = 0,.z = 0},
-            .mass = 1.989e30
-        },
     };
 
-
-    printf("Elapsed time: %lfs\n", get_time(&curr_time));
-
     //normalise the origin to the sun, and velocities wrt to sun
-    int n = (int) sizeof(planets) / sizeof(Planet);
-    for (int i = 1; i < n; i++) {
+    for (int i = 0; i < sizeof(planets) / sizeof(Planet);i++) {
         planets[i].pos = add(planets[i].pos, neg(planets[0].pos));
         planets[i].vel = add(planets[i].vel, neg(planets[0].vel));
     }
-    planets[0].pos = (vect) {0, 0, 0};
-    planets[0].vel = (vect) {0, 0, 0};
 
-    // printf("%.12Lf %.12Lf %.12Lf\n", planets[0].pos.x, planets[0].pos.y, planets[0].pos.z);
-    // printf("%.12Lf %.12Lf %.12Lf\n", planets[1].pos.x, planets[1].pos.y, planets[1].pos.z);
 
-    printf("Elapsed time: %lfs\n", get_time(&curr_time));
-
-    long days = 365 * 1;
-    float t = 24.0f * 3600 / PER_DAY;
-    long iterations = (long)(days * 24 * 3600 * (1 / dt));
-    printf("Total iterations: %ld\n", iterations);
-
-    int export_frequency = (int) (t / dt);
-    float inv_secs_in_day = 1.0f / (24 * 3600);
-
-    int j = 0;
-    for (long i = 0; i < iterations; i++, j++) {
-        update_pos(planets, n);
-        if (j == export_frequency) {
+    long days = 365 * 12;
+    int n = sizeof(planets) / sizeof(Planet);
+    float t = 24 * 3600 / PER_DAY;
+    for (long i = 0; i < (long)(days * 24 * 3600 * (1 / dt));i++) {
+        update_pos(planets, sizeof(planets) / sizeof(Planet));
+        if (i % (int)(t * (1 / dt)) == 0) {
             char s[STR_MAX] = "";
-            jsonify(inv_secs_in_day, planets, n, s);
+            jsonify((i * dt) / (24 * 3600), planets, n, s);
             fputs(s, fptr);
-            j = 0;
         }
     }
 
     fputs("}", fptr);
     fclose(fptr);
-
-    printf("Total time %.12lfs\n", get_time(&start));
 }
 
 void update_pos(Planet planets[], int n) {
     vect acc[n];
 
     //Calculate accelerations of planets assuming all planets are stationary
-    for (int i = 0; i < n; i++) {
-        acc[i] = (vect) {0, 0, 0};
-    }
-
     for (int i = 0; i < n;i++) {
         Planet pi = planets[i];
-        for (int j = 0; j < i;j++) {
+        acc[i] = (vect){ 0,0,0 };
+        for (int j = 0; j < n;j++) {
             Planet pj = planets[j];
+            if (i == j)
+                continue;
+
             vect dist = add(pj.pos, neg(pi.pos));
-            // printf("%d %d %.12Lf\n", i, j, mag(dist));
-            // printf("%.12Lf %.12Lf %.12Lf\n", pi.pos.x, pi.pos.y, pi.pos.z);
-            // printf("%.12Lf %.12Lf %.12Lf\n", pj.pos.x, pj.pos.y, pj.pos.z);
-            fflush(stdout);
-            assert(mag(dist) != 0);
             vect aij = scalar_mult(dist, G * pj.mass / pow(mag(dist), 3));
             // if (i < 100)
             //     printf("%Lf %Lf %Lf\n", aij.x, aij.y, aij.z);
             acc[i] = add(acc[i], aij);
-            acc[j] = add(acc[j], neg(aij));
         }
     }
     //Update velocity and positions
     for (int i = 0;i < n;i++) {
         vect v = add(planets[i].vel, scalar_mult(acc[i], dt));
-        planets[i].pos = add(planets[i].pos, scalar_mult(v, dt)); // sf = si + v.dt
+        vect vel = add(v, planets[i].vel); //vel = u + v
+
+        planets[i].pos = add(planets[i].pos, scalar_mult(vel, dt / 2.0)); // sf = si + (u+v)*t/2
         planets[i].vel = v;
     }
 }
