@@ -1,7 +1,7 @@
 from functools import cache
-from matplotlib import pyplot as plt
 
 def visualize(s):
+	from matplotlib import pyplot as plt
 	x, y = zip(*s)
 	plt.plot(x, y, 'ro-')
 	plt.show()
@@ -10,7 +10,7 @@ def no_symmetry(x, n):
 	return True
 	x = 2 * x + 1
 	v = [bool(x & (1 << j)) for j in range(n - 1)]
-	print(v)
+	# print(v)
 	
 	sym = [x]
 	sym.append(0)
@@ -68,7 +68,7 @@ def fib(n):
 print('n\tFib\tActual')
 for n in range(2, 22):
 	x, y = fib(n), solve(n)
-	print(n, x, y, sep='\t')
+	print(n, x, y, sep = '\t')
 	# if x != y:
 	# 	print(n)
 	# 	break
