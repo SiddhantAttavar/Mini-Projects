@@ -44,8 +44,8 @@ def event_loop():
         # threading.Thread(target=threaded_player_call, args=(0, None, iteration)).start()
         # threading.Thread(target=threaded_player_call, args=(1, None, iteration)).start()
         # time.sleep(time_limit)
-        threaded_player_call(0, None, iteration)
-        threaded_player_call(1, None, iteration)
+        threaded_player_call(0, streak, iteration)
+        threaded_player_call(1, streak, iteration)
 
         # If TLE on first then random, else repeat last move
         if not move_queue[0] or move_queue[0] not in [COOP, DEFECT]:
