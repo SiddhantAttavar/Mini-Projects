@@ -1,5 +1,4 @@
-import time, threading, random, math, json, copy
-from agent import BaseAgent
+import time, threading, random, copy
 
 COOP = 1
 DEFECT = -1
@@ -9,14 +8,14 @@ players = []
 move_queue = [0, 0]
 
 coop_win = lambda x: 20 + 5 * (x // 5)
-betrayal_win = lambda x: 50
+betrayal_win = lambda x: 45
 betrayal_lose = lambda x: -10 * (x // 5)
 defect = lambda x: -5 * (x // 5)
 payoff_matrx = [[coop_win, coop_win], [betrayal_win, betrayal_lose], [defect, defect]]
 
-error = 0.05
-time_limit = 0.0001  # seconds
-rounds = 100
+error = 0.015
+time_limit = 0.001  # seconds
+rounds = 175
 
 streak = 0
 history = {}
@@ -30,7 +29,7 @@ score = {1: 0, 2: 0}
 def threaded_player_call(player, streak, iteration):
     global move_queue
     state = {"current_iter": iteration, "history": history, "streak": streak}
-    state = copy.deepcopy(state)
+    # state = copy.deepcopy(state)
     move = players[player].next_move(state)
     # print(f"Player {player}:", move, iteration, history)
     if not iteration in history:
@@ -44,8 +43,8 @@ def event_loop():
         # threading.Thread(target=threaded_player_call, args=(0, None, iteration)).start()
         # threading.Thread(target=threaded_player_call, args=(1, None, iteration)).start()
         # time.sleep(time_limit)
-        threaded_player_call(0, streak, iteration)
-        threaded_player_call(1, streak, iteration)
+        threaded_player_call(0, None, iteration)
+        threaded_player_call(1, None, iteration)
 
         # If TLE on first then random, else repeat last move
         if not move_queue[0] or move_queue[0] not in [COOP, DEFECT]:
@@ -101,7 +100,8 @@ def event_loop():
         iteration += 1
 
 def playoff(p1, p2):
-    global players, move_queue, iteration, streak, score
+    global players, move_queue, iteration, streak, score, history
+    history = {}
     players = [p1, p2]
     move_queue = [0, 0]
     iteration = 1

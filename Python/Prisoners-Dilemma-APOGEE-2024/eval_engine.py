@@ -18,7 +18,7 @@ betrayal_lose = lambda x: -10 * (x // 5)
 defect = lambda x: -5 * (x // 5)
 payoff_matrx = [[coop_win, coop_win], [betrayal_win, betrayal_lose], [defect, defect]]
 
-error = 0.05
+error = 0.015
 time_limit = 0.01  # seconds
 rounds = 100
 

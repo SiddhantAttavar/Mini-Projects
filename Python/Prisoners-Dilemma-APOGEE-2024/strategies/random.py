@@ -7,7 +7,6 @@ class RandomAgent(BaseAgent):
         self.defect_prob = defect_prob
 
     def next_move(self, state):
-        op_id = 1 if self.id == 2 else 2
         if random() < self.defect_prob:
             return -1
         return 1
