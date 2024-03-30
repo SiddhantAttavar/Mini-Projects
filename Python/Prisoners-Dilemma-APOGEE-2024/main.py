@@ -20,8 +20,8 @@ def evaluate_agents(agents):
     for i in range(num_agents):
         for opp in opposition:
             for k in range(repetitions):
-                x = playoff(GeneticAgent(1, agents[i]), opp[0](2, *opp[1:]))[0]
-                scores[i] += x
+                x = playoff(GeneticAgent(1, agents[i]), opp[0](2, *opp[2:]))[0]
+                scores[i] += x * opp[1]
 
         if scores[i] > best_score:
             best_score = scores[i]
@@ -40,7 +40,7 @@ def next_gen(agents, filter, mutation_prob):
         top_agents.append(agents[i])
         score_sum += scores[i]
 
-    print(f'Avg surviving score: {score_sum / (repetitions * filter * len(opposition))}')
+    print(f'Avg surviving score: {score_sum / (repetitions * filter * len(opposition)):.2f}')
     new_agents = top_agents + [deepcopy(choice(top_agents)) for _ in range(num_agents - filter)]
 
     for i in range(num_agents):
@@ -53,7 +53,7 @@ def next_gen(agents, filter, mutation_prob):
 visibility = 3
 strat_len = 1 << (2 * visibility)
 num_agents = min(100, 1 << strat_len)
-num_generations = 30
+num_generations = 20
 filter = num_agents // 10
 mutation_prob = 0.1
 repetitions = 10
@@ -63,15 +63,11 @@ with open('out.txt', 'r') as file:
 	l = eval(file.read())
 
 opposition = [
-	# RandomAgent(2, 0.5),
-	(TitForTatAgent,),
-	(TitForTatAgent,),
-	(TitForTatAgent,),
-	(TitForTatDelayAgent,),
-    (PreemptErrorAgent, 3),
-    (VSSAgent,),
-    (GeneticAgent, l),
-    (CooperateAgent,),
+	(TitForTatAgent, 3),
+	(TitForTatDelayAgent, 1),
+    (PreemptErrorAgent, 1, 3),
+    (VSSAgent, 1),
+    (CooperateAgent, 1),
 ]
 
 curr_gen = [[random() < 0.5 for _ in range(strat_len)] for _ in range(num_agents)]
@@ -79,7 +75,9 @@ best_agent = []
 best_score = 0
 
 for i in range(num_generations):
-	print(f'Generation: {i}')
-	curr_gen = next_gen(curr_gen, filter, mutation_prob)
+    print(f'Generation: {i}')
+    best_agent = []
+    best_score = 0
+    curr_gen = next_gen(curr_gen, filter, mutation_prob)
 with open('out.txt', 'w') as file:
     file.write(str(best_agent))

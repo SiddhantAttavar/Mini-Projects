@@ -8,6 +8,7 @@ from strategies.vss import VSSAgent
 from strategies.genetic import GeneticAgent
 from strategies.cooperator import CooperateAgent
 from strategies.defector import DefectAgent
+from strategies.final_genetic import Agent
 
 l = []
 with open('out.txt', 'r') as file:
@@ -26,7 +27,7 @@ agents = [
 
 a = b = 0
 for agent in agents:
-	x, y = playoff(GeneticAgent(1, l), agent)
+	x, y = playoff(Agent(1), agent)
 	print(x, y)
 
 	a += x

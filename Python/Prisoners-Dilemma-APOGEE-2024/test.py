@@ -9,6 +9,7 @@ from strategies.vss import VSSAgent
 from strategies.genetic import GeneticAgent
 from strategies.cooperator import CooperateAgent
 from strategies.defector import DefectAgent
+from strategies.final_genetic import Agent
 
 l = []
 with open('out.txt', 'r') as file:
@@ -40,6 +41,7 @@ agents = [
 	(GeneticAgent, 'genetic', l),
 	(CooperateAgent, 'cooperator', ),
 	(DefectAgent, 'defector', ),
+	(Agent, 'final', )
 ]
 
 scores = run_tournament(agents)
