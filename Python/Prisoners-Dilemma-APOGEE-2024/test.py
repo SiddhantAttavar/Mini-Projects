@@ -1,21 +1,25 @@
 from time import time
 from playoff import playoff
+from importlib import import_module
+from glob import glob
+from multiprocessing import Pool
 
-from strategies.tit_for_tat import TitForTatAgent
-from strategies.tit_for_tat_delay import TitForTatDelayAgent
-from strategies.random import RandomAgent
-from strategies.preempt_error import PreemptErrorAgent
-from strategies.vss import VSSAgent
+# from strategies.tit_for_tat import TitForTatAgent
+# from strategies.tit_for_two_tats import TitForTwoTatsAgent
+# from strategies.tit_for_tat_delay import TitForTatDelayAgent
+# from strategies.random import RandomAgent
+# from strategies.preempt_error import PreemptErrorAgent
+# from strategies.vss import VSSAgent
 from strategies.genetic import GeneticAgent
-from strategies.cooperator import CooperateAgent
-from strategies.defector import DefectAgent
+# from strategies.cooperator import CooperateAgent
+# from strategies.defector import DefectAgent
 from strategies.final_genetic import Agent
 
 l = []
 with open('out.txt', 'r') as file:
 	l = eval(file.read())
 
-repetitions = 1000
+repetitions = 100
 
 def run_tournament(agents):
 	start = time()
@@ -32,17 +36,23 @@ def run_tournament(agents):
 	print(f'Time: {time() - start:.2f}s')
 	return scores
 
-agents = [
-	(RandomAgent, 'random', 0.2),
-	(TitForTatAgent, 'tit_for_tat', ),
-	(TitForTatDelayAgent, 'tit_for_tat_delay', ),
-	(PreemptErrorAgent, 'preempt_error', 3),
-	(VSSAgent, 'vss', ),
-	(GeneticAgent, 'genetic', l),
-	(CooperateAgent, 'cooperator', ),
-	(DefectAgent, 'defector', ),
-	(Agent, 'final', )
-]
+# agents = [
+# 	(RandomAgent, 'random', 0.2),
+# 	(TitForTatAgent, 'tit_for_tat', ),
+# 	# (TitForTwoTatsAgent, 'tit_for_two_tats', ),
+# 	(TitForTatDelayAgent, 'tit_for_tat_delay', ),
+# 	(PreemptErrorAgent, 'preempt_error', 3),
+# 	(VSSAgent, 'vss', ),
+# 	(GeneticAgent, 'genetic', l),
+# 	(CooperateAgent, 'cooperator', ),
+# 	(DefectAgent, 'defector', ),
+# 	(Agent, 'final', )
+# ]
+
+agents = [(GeneticAgent, 'genetic', l), (Agent, 'final', )]
+for i, file in enumerate(glob('submissions/*.py')):
+    module = import_module(file.replace('/', '.')[:-3])
+    agents.append((module.Agent, file.split('/')[-1].split('.')[0]))
 
 scores = run_tournament(agents)
 for i in sorted(range(len(agents)), key = lambda x: -scores[x]):

@@ -27,7 +27,7 @@ agents = [
 
 a = b = 0
 for agent in agents:
-	x, y = playoff(Agent(1), agent)
+	x, y = playoff(GeneticAgent(1, l), agent)
 	print(x, y)
 
 	a += x

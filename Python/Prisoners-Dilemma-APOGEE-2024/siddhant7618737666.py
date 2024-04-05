@@ -1,11 +1,7 @@
 from agent import BaseAgent
-from math import log2
-
 class Agent(BaseAgent):
     def __init__(self, id):
         super().__init__(id = id)
-        # self.vis = int(log2(len(strat))) // 2
-        # self.strat = strat
 
     def next_move(self, state):
         opp_id = 1 if self.id == 2 else 2

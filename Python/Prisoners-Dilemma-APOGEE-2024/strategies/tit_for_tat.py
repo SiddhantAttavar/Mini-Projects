@@ -1,6 +1,4 @@
 from agent import BaseAgent
-from strategies.genetic import GeneticAgent
-from playoff import playoff
 
 class TitForTatAgent(BaseAgent):
     def __init__(self, id):
