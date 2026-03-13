@@ -9,7 +9,7 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Maze Solver: A maze solver written in Python, which compares different maze solving algorithms
  - NTSE Score Ranking: A program to find your ranking in NTSE given the scores
  - PowerToys Run Search: A command line utility to search DuckDuckGo or any other search engine for a given query, which can be integrated with PowerToys Run
- - Regex Longest Word: A program to find the longest word in a list, which can be displayed on a seven-segment display using regular expressions. Insipired by [this Tom Scott video](https://youtu.be/zp4BMR88260)
+ - Regex the longest Word: A program to find the longest word in a list, which can be displayed on a seven-segment display using regular expressions. Inspired by [this Tom Scott video](https://youtu.be/zp4BMR88260)
  - Snake: A snake game written in Python
  - Wikipedia Philosophy: A program to that starts at a random Wikipedia article and then recursively clicks on the first link of the article to ultimately find the Philosophy article. Read more about it [here](https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy)
  - CSV data plotter: A program to plot data from a CSV file
@@ -36,6 +36,26 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - TicTacToe: A program that allows users to play a game of TicTacToe against the computer or another user
  - Tree: Another program to draw a Pythagorean tree
  - UFDS Ranking: A program to find the total ranking in UFDS mocks
+ - Mastermind: A code-breaking game where you guess a random sequence of colored pegs
+ - Mastermind (2): An alternative implementation of the Mastermind game
+ - Calculator: A basic calculator program with operations for addition, subtraction, multiplication, and division
+ - Coditional statements: A Blackjack game implementation demonstrating conditional logic and user input handling
+ - Class Calculate: A Blackjack game using class-based logic and card dealing mechanics
+ - While loop: Examples demonstrating while loop concepts and usage patterns
+ - camel challenge: A programming challenge related to camel case conversion and string manipulation
+ - Football Score: A tournament score calculator that computes team standings based on wins, draws, and losses
+ - integer to roman numeral: Converts integer numbers to Roman numeral notation
+ - digits of a number: A program to extract and manipulate individual digits from a number
+ - digits of a number (2): An alternative implementation for digit extraction and manipulation
+ - sort list1: A basic list sorting algorithm implementation
+ - sort list2: An alternative list sorting algorithm implementation
+ - bee-ess-tee: A project featuring CSV data analysis and image-based visualizations
+ - Functions: A collection of seven function implementations demonstrating various programming concepts
+ - IEEE-Backend-Recruitments: Solutions to IEEE club backend recruitment round interview questions
+ - Library: A library management system with a Book class and main application interface
+ - Open-Motor-Simulations-Astro: A motor simulation project with numerical data output
+ - Prisoners-Dilemma-APOGEE-2024: A competition project implementing the Prisoner's Dilemma with multiple strategies including genetic algorithms
+ - twixt-bot: A bot implementation for the Twixt game/puzzle
 
 ## Android projects: <a name = "android-projects"></a>
  - Android apps: Some sample android apps
@@ -45,6 +65,14 @@ This repository consists of a number of small projects. Most of these _"mini-pro
  - Just Java: A tutorial android app to order coffee
  - My Application: My first android app
  - Neurosky Test: An example app that makes use of the [Neurosky EEG SDK for Android](https://store.neurosky.com/products/android-developer-tools-4)
+ - Quiz: A quiz/question-answer application for Android
+ - Sandeep Vihar App: An Android application project for residence clubhouse management
+
+## C projects: <a name = "c-projects"></a>
+ - Pacman: A complete Pacman game clone written in C using the Raylib graphics library with maze navigation, ghost AI, pellet collection, scoring, and lives system (generated to check out Claude Haiku 4.5)
+ - planets.c: A C source file for planetary and celestial mechanics simulations
+ - planet_simulation.c: A solar system simulation program with gravitational physics calculations
+ - compare.py: A Python utility script for comparing simulation data and results
 
 ## Web projects: <a name = "web-projects"></a>
  - [Demos Math Project](https://siddhantattavar.github.io/Mini-Projects/Web/DesmosMathProjectClass11.html): A program to display the current state of a tic-tac-toe game state in desmos using only mathematical expressions
