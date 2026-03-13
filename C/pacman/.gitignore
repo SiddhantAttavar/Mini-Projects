@@ -1,0 +1,30 @@
+# Build artifacts
+pacman
+pacman.o
+*.o
+*.a
+*.so
+*.exe
+
+# Test files
+test_raylib
+test_raylib.o
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.directory
+Thumbs.db
+
+# Build directory
+build/
+bin/
+
+# Dependencies (raylib should be built locally)
+raylib/

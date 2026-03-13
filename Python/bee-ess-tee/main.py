@@ -32,12 +32,13 @@ while y < x:
 	assert(y + len(k) == n)
 	if np.sum(t < t0) == 0:
 		break
-#This is black magic, don't ask why the model does what it does :(
 if y >= x:
 	print('Event started')
 
-# d = [data[i] - data[i - 1] for i in range(1, len(data))]
-# plt.plot(d)
-plt.plot(data)
-plt.plot(time)
+d = [data[i] - data[i - 1] for i in range(1, len(data))]
+plt.plot(d)
+# plt.plot(data)
+plt.xlabel('Time steps')
+plt.ylabel('Incoming people (as percentage)')
+# plt.plot(time)
 plt.show()
